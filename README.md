@@ -39,11 +39,17 @@ The program will output the sequence of page references and display the state of
 ```sh
 [Reference Bit Algorithm]
 > 1
-Pages: | 1 (10000000) | 
+Pages: | 1 (10000000) |
 > 2
-Pages: | 1 (01000000) | 2 (10000000) | 
+Pages: | 1 (01000000) | 2 (10000000) |
 > 3
-Pages: | 1 (00100000) | 2 (01000000) | 3 (10000000) | 
+Pages: | 1 (00100000) | 2 (01000000) | 3 (10000000) |
+> 2
+Pages: | 1 (00010000) | 2 (10100000) | 3 (01000000) |
+> 1
+Pages: | 1 (10001000) | 2 (01010000) | 3 (00100000) |
+> 5
+Pages: | 1 (01000100) | 2 (00101000) | 5 (10000000) |
 ...
 Reference Bit Algorithm Page Faults: 15
 
@@ -51,11 +57,20 @@ Reference Bit Algorithm Page Faults: 15
 
 [Clock Algorithm]
 > 1
-Pages: | 1 (true) <- | 
+Pages: | 1 (true) <- |
 > 2
-Pages: | 1 (true) <- | 2 (true) | 
+Pages: | 1 (true) <- | 2 (true) |
 > 3
-Pages: | 1 (true) <- | 2 (true) | 3 (true) | 
+Pages: | 1 (true) <- | 2 (true) | 3 (true) |
+> 2
+Pages: | 1 (true) <- | 2 (true) | 3 (true) |
+> 1
+Pages: | 1 (true) <- | 2 (true) | 3 (true) |
+> 5
+Pages: | 1 (false) | 2 (true) <- | 3 (true) |
+Pages: | 1 (false) | 2 (false) | 3 (true) <- |
+Pages: | 1 (false) <- | 2 (false) | 3 (false) |
+Pages: | 5 (true) | 2 (false) <- | 3 (false) |
 ...
 Clock Algorithm Page Faults: 12
 ```
