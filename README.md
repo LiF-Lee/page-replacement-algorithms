@@ -51,7 +51,7 @@ Pages: | 1 (10001000) | 2 (01010000) | 3 (00100000) |
 > 5
 Pages: | 1 (01000100) | 2 (00101000) | 5 (10000000) |
 ...
-Reference Bit Algorithm Page Faults: 15
+Reference Bit Algorithm Page Faults: 8
 
 ----------------------------------------
 
@@ -72,5 +72,5 @@ Pages: | 1 (false) | 2 (false) | 3 (true) <- |
 Pages: | 1 (false) <- | 2 (false) | 3 (false) |
 Pages: | 5 (true) | 2 (false) <- | 3 (false) |
 ...
-Clock Algorithm Page Faults: 12
+Clock Algorithm Page Faults: 11
 ```
